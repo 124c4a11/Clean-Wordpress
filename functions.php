@@ -161,6 +161,33 @@ function clean_scripts() {
 add_action( 'wp_enqueue_scripts', 'clean_scripts' );
 
 /**
+ * Create custom post type
+ */
+
+function clean_create_post_type() {
+  register_post_type( 'projects',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects' ),
+				'singular_name' => __( 'Project' ),
+				'add_new_item' => __('Add New Project', 'clean'),
+      ),
+			'menu_position' => 5,
+      'public' => true,
+			'has_archive' => true,
+			'supports' => array(
+				'title',
+				'editor',
+				'post-formats',
+				'excerpt',
+				'thumbnail',
+			),
+    )
+  );
+}
+add_action( 'init', 'clean_create_post_type' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
