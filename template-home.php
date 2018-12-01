@@ -1,23 +1,19 @@
 <?php
 /**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package clean
+ * Template name: Homepage
  */
-
 get_header();
 ?>
 
-<?php if ( have_posts() ) : ?>
+
+<?php
+	$args = array( 'post_type' => 'projects', 'order' => 'ASC' );
+	$query = new WP_Query( $args );
+
+	if ( $query->have_posts() ) :
+?>
 	<div id="fh5co-portfolio">
-		<?php $i = 1; while( have_posts() ) : the_post(); ?>
+		<?php $i = 1; while ( $query->have_posts() ) : $query->the_post(); ?>
 			<?php
 				$img_url = ( has_post_thumbnail() ) ? get_the_post_thumbnail_url() : 'https://picsum.photos/1280/864';
 			?>
@@ -31,6 +27,10 @@ get_header();
 			</div>
 		<?php $i++; endwhile; ?>
 	</div>
-<?php endif; ?>
+<?php endif; wp_reset_postdata(); ?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+	the_content();
+endwhile; endif; ?>
 
 <?php get_footer(); ?>
