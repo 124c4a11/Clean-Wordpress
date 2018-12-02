@@ -7569,8 +7569,12 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-team .fh5co-staff {
   margin-bottom: 20px;
 }
-#fh5co-team .fh5co-staff figure {
+#fh5co-team .fh5co-staff figure,
+#fh5co-team .fh5co-staff .fw-team-image {
   margin-bottom: 30px;
+}
+#fh5co-team .fh5co-staff .fw-team-inner {
+  text-align: left;
 }
 #fh5co-team .fh5co-staff h3 {
   font-size: 18px;
@@ -7667,6 +7671,7 @@ pre {
   background: #e32929;
   border: 2px solid #e32929;
 }
+a.btn-primary:visited { color: #fff; }
 
 .btn-success {
   background: #5cb85c;
