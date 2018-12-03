@@ -8293,9 +8293,9 @@ a > img.fh5co-align-center {
   padding: .3em .8em;
   border: 2px solid transparent;
   border-radius: 2px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
-  transition-duration: .25s;
+  transition-duration: .3s;
 }
 
 .pagination .page-numbers .current {
@@ -8306,8 +8306,7 @@ a > img.fh5co-align-center {
 
 .pagination .page-numbers li a:hover,
 .pagination .page-numbers li a:focus {
-  border-color: #e32929;
-  color: #e32929;
+  border-color: #000;
   text-decoration: none;
   outline: none;
 }
