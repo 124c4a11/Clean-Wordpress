@@ -30,8 +30,11 @@ get_header();
 				</div>
 			</div>
 		<?php $i++; endwhile; ?>
+		<div class="clearfix"></div>
+		<?php the_posts_pagination( array(
+			'type' => 'list',
+		) ); ?>
 	</div>
-	<div class="clearfix"></div>
 <?php endif; ?>
 
 <?php get_footer(); ?>
