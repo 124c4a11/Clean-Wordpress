@@ -31,6 +31,7 @@ get_header();
 			</div>
 		<?php $i++; endwhile; ?>
 	</div>
+	<div class="clearfix"></div>
 <?php endif; ?>
 
 <?php get_footer(); ?>

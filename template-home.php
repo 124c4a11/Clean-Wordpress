@@ -27,6 +27,7 @@ get_header();
 			</div>
 		<?php $i++; endwhile; ?>
 	</div>
+	<div class="clearfix"></div>
 <?php endif; wp_reset_postdata(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post();

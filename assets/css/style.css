@@ -7612,21 +7612,23 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   float: left;
 }
-#fh5co-services .fh5co-service .fh5co-icon {
+#fh5co-services .fh5co-icon {
   float: left;
   width: 20%;
 }
-#fh5co-services .fh5co-service .fh5co-icon i {
+#fh5co-services .fh5co-icon i {
   font-size: 40px;
   color: #e32929;
 }
-#fh5co-services .fh5co-service .fh5co-desc {
+#fh5co-services .fh5co-desc {
   width: 70%;
   float: right;
+  text-align: left;
 }
-#fh5co-services .fh5co-service .fh5co-desc h3 {
+#fh5co-services .fh5co-desc h3 {
   margin-top: 0;
   font-size: 18px;
+  font-weight: 300;
 }
 
 pre {
