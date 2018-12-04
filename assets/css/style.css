@@ -3654,7 +3654,8 @@ select[multiple].input-lg,
   }
 }
 
-.btn {
+.btn,
+input[type="submit"].search-submit {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -3738,17 +3739,21 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #333;
 }
 
-.btn-primary {
+.btn-primary,
+input[type="submit"].search-submit {
   color: #fff;
   background-color: #e32929;
   border-color: #d61c1c;
+  transition-duration: .3s;
 }
-.btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus, .btn-primary.focus,
+input[type="submit"].search-submit:focus, input[type="submit"].search-submit.focus {
   color: #fff;
   background-color: #c01919;
   border-color: #660d0d;
 }
-.btn-primary:hover {
+.btn-primary:hover,
+input[type="submit"].search-submit:hover {
   color: #fff;
   background-color: #c01919;
   border-color: #a01515;
@@ -7861,20 +7866,24 @@ a.btn-primary:visited { color: #fff; }
   line-height: 1.5;
 }
 
-.fh5co-list-check {
+/*================================================================
+  widget
+================================================================*/
+
+.widget ul {
   position: relative;
   padding: 0;
   margin: 0;
   clear: both;
 }
-.fh5co-list-check li {
+.widget ul li {
   padding-left: 25px !important;
   position: relative;
   display: block;
   margin-bottom: 10px !important;
   line-height: 20px;
 }
-.fh5co-list-check li:before {
+.widget ul li:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -7892,6 +7901,15 @@ a.btn-primary:visited { color: #fff; }
   left: 0;
   font-size: 18px;
   color: #ccc;
+}
+.widget ul li a {
+  color: #868f90;
+  transition-duration: .3s;
+}
+.widget ul li a:hover,
+.widget ul li a:focus {
+  color: #e32929;
+  text-decoration: none;
 }
 
 .fh5co-page-heading {
@@ -8312,5 +8330,24 @@ a > img.fh5co-align-center {
 }
 
 .pagination .page-numbers li .dots { pointer-events: none; }
+
+/*================================================================
+  single-post
+================================================================*/
+
+.single-post-thumb { margin-bottom: 1.5em; }
+
+/*================================================================
+  search-widget
+================================================================*/
+
+input[type="search"].search-field {
+  color: #868f90;
+  font-weight: 300;
+}
+
+input[type="submit"].search-submit { padding: 8px 14px; }
+
+input[type="submit"].search-submit:focus { outline: none; }
 
 /*# sourceMappingURL=style.css.map */

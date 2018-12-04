@@ -108,7 +108,7 @@
 	};
 
 
-
+	$('body.single .main-content p').addClass('animate-box');
 
 
 
